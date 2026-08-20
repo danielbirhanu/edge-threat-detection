@@ -1,0 +1,10 @@
+{
+  "name": "@edge-threat/demo-api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "build": "tsc --noEmit -p tsconfig.json"
+  }
+}

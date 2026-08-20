@@ -1,0 +1,19 @@
+name = "edge-threat-gateway"
+main = "src/index.ts"
+compatibility_date = "2026-08-20"
+
+[vars]
+ENVIRONMENT = "development"
+UPSTREAM_API_URL = "http://localhost:8788"
+RISK_RATE_LIMIT_THRESHOLD = "60"
+RISK_BLOCK_THRESHOLD = "80"
+EVENT_RETENTION_DAYS = "30"
+
+[dev]
+port = 8787
+
+[env.preview]
+name = "edge-threat-gateway-preview"
+
+[env.production]
+name = "edge-threat-gateway-production"

@@ -1,0 +1,34 @@
+{
+  "name": "edge-threat-detection",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "workers/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:gateway\" \"npm run dev:api\" \"npm run dev:dashboard\"",
+    "dev:gateway": "npm run dev --workspace @edge-threat/gateway",
+    "dev:api": "npm run dev --workspace @edge-threat/demo-api",
+    "dev:dashboard": "npm run dev --workspace @edge-threat/dashboard",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@vitest/coverage-v8": "^1.6.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.1",
+    "prettier": "^3.9.6",
+    "typescript": "^5.9.3",
+    "vitest": "^1.6.1",
+    "wrangler": "^3.114.17"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@edge-threat/dashboard",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --noEmit -p tsconfig.json --watch",
+    "build": "tsc --noEmit -p tsconfig.json"
+  }
+}
