@@ -8,3 +8,4 @@ dist/
 playwright-report/
 coverage/
 self-docs/
+tests/

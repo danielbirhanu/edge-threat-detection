@@ -4,7 +4,7 @@ A Cloudflare-native security gateway for web and API traffic. The v1 system will
 
 ## Current status
 
-The project foundation is configured: npm workspaces, strict TypeScript, Wrangler entry points, shared contracts, validated environment configuration, Vitest, formatting, and CI. Detection and proxy behavior are the next implementation phase.
+The project foundation and first request path are configured: the demo API provides deterministic routes, and the gateway extracts normalized request metadata and proxies traffic upstream. Detection behavior is the next implementation phase.
 
 ## Workspace
 
