@@ -15,11 +15,19 @@ export type RequestContext = {
   authenticated: boolean;
 };
 export type DetectionSignal = {
-  type: string;
+  type: "brute_force" | "rate_abuse" | "endpoint_scanning" | "request_anomaly";
   value: number;
   weight: number;
   confidence: number;
   evidence: Record<string, number | string | boolean>;
+};
+export type IdentityBehaviorSnapshot = {
+  windowSeconds: number;
+  requestCount: number;
+  failedLoginCount: number;
+  successfulLoginCount: number;
+  uniquePathCount: number;
+  notFoundCount: number;
 };
 export type SecurityDecision = {
   requestId: string;
